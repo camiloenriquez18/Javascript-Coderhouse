@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
     <title>Document</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!--primero se llama al script de la libreria-->
     <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <div class="contenedor">
-
-    </div>
+    <div class="contenedor"></div>
+    <div class="contenedor__all">
     <div id="divInputs" style="display:none;">
     <input type="text" id="edad" placeholder="Edad del conductor">
     <input type="text" id="modelo" placeholder="Modelo del auto en año">
@@ -25,8 +29,20 @@
         <input type="text" id="inputmarca" placeholder="Marca del vehiculo">
         <input type="text" id="inputmodelo" placeholder="modelo del vehiculo">
     </div>
+    <p id="Polizaguardada" style="display: none;"> Su poliza se ha guardado con exito</p>
+    <div id="divCards"></div>
     <div id="Poliza"></div>
     <div id="boton-container"></div>
-    <div id="divCards"></div>
+    
+
+    <div id="divcot_USD" style="display: none;">
+        <input type="text" id="edad" name="edad" placeholder="Edad del conductor">
+        <input type="text" id="antiguedad" name="antiguedad"  placeholder="modelo/año de patentamiento">
+        <input type="text" id="cobertura" name="cobertura"  placeholder="monto de cobertura en USD">
+        <button id="cotizar">Cotizar en dolares</button>
+        <p style="display: none; max-width: 200px;" id="resultado"></p>
+    </div>
+    <div id="preciodolar_actualizado"></div>
+</div>
 </body>
 </html>
